@@ -1,0 +1,606 @@
+/*page background, size and default font*/
+body{
+    background: url(img/background.jpg) center center no-repeat fixed;
+    background-size: cover;
+    color: white;    
+    font-family: Arial, monospace;
+    font-size: 18px;
+    height: 100%;
+    min-width: 700px;
+}
+
+/*for footer sticker*/
+.wrapper{
+    display: block;
+    min-height: 100%;
+    position: relative;
+}
+/*global container dimensions*/
+.container{
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+    width: 1400px;
+}
+
+/*set widget title fonts*/
+h1, h2, h3, h4, h5, h6{  
+    font-size: 30px;
+    font-stretch:extra-condensed;
+    font-weight: 100;
+    letter-spacing: 2px;
+    line-height: 0.9em;
+    margin: 0;
+    padding: 0;
+}
+
+/*search box container, top right corner*/
+.pgSearch{
+    display: inline-block;
+    margin: 21px 17px;
+    position: absolute;
+    right: 0px;
+}
+
+/*search button icon*/
+.searchIcon{
+    background: url(img/search-icon.png) center center no-repeat;
+    background-size: 100%;
+    border: none;
+    height: 30px;
+    opacity: 0.4;
+    text-indent: -999px;
+    vertical-align: middle;
+    width: 40px;
+}
+
+/*user input box styling*/
+input:not(.searchIcon){
+    background: rgba(0,0,0,0.4);
+    border: none;
+    color: rgba(250,184,5,0.9);
+    line-height: 30px;    
+    margin: 0;
+    padding: 0 5px;
+}
+
+
+/*interactive styling*/
+input:not(.searchIcon):hover,
+input:not(.searchIcon):focus,
+input:not(.searchIcon):active{    
+    background: rgba(0,0,0,0.6); 
+}
+
+.searchIcon:hover,
+.searchIcon:focus{    
+    opacity: 0.6;
+}
+/*end*/
+
+/*navigation bar container*/
+nav{
+    background: rgba(250,184,5,0.65);
+    border: none;
+    display: inline-block; 
+    height: 50px;
+    margin-top: 80px;
+    min-width: 500px;
+    text-align: center;
+}
+/*reset padding and margin, to center text vertically*/
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+/*arrange ul items horizontally, change font size, case and weigth*/
+nav li{
+    display: inline-block;
+    font-size: 30px;
+    font-stretch: extra-condensed;
+    font-weight: bold;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+/*fix text decoration and padding*/
+nav a{
+    color: #000;
+    text-decoration: none;
+    padding: 8px 9px;
+}
+/*change style for actual navigation button*/
+nav a.current{    
+    background: -webkit-linear-gradient(rgba(3,15,91,0.1), rgba(250,184,5,1));    
+    background: -moz-linear-gradient(rgba(3,15,91,0.1), rgba(250,184,5,1));    
+    background: -ms-linear-gradient(rgba(3,15,91,0.1), rgba(250,184,5,1));    
+    background: -o-linear-gradient(rgba(3,15,91,0.1), rgba(250,184,5,1));    
+    background: linear-gradient(rgba(3,15,91,0.1), rgba(250,184,5,1));
+    color: #fff;
+}
+/*change style when hovering*/
+nav a:hover{ 
+    background: -webkit-linear-gradient(rgba(250,184,5,1), rgba(3,15,91,0.1));
+    background: -moz-linear-gradient(rgba(250,184,5,1), rgba(3,15,91,0.1));
+    background: -ms-linear-gradient(rgba(250,184,5,1), rgba(3,15,91,0.1));
+    background: -o-linear-gradient(rgba(250,184,5,1), rgba(3,15,91,0.1));
+    background: linear-gradient(rgba(250,184,5,1), rgba(3,15,91,0.1));    
+    color: #ccc;
+}
+/*end*/
+
+/*latest blogs container*/
+#minBlog{       
+    background: rgba(0,0,0,0.6); 
+    float: left;
+    margin: 60px 0 0 40px;
+    width: 460px;
+}
+
+/*latest blogs widget title*/
+#minBlog h1{        
+    background: rgba(250,184,5,0.65);
+    bottom: 380px;
+    color: rgba(0,0,0,0.84);
+    left: 368px;
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    white-space: nowrap; /*disable text wrapping*/
+}
+
+article{
+    color: #eee;
+    margin: 0;
+    padding: 3px;
+}
+h3{
+    color: rgba(250,184,5,1);
+    font-size: 18px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: bold;
+    padding: 5px 2px;    
+}
+
+small{
+    color: #fadc8a;
+    font-size: 12px;
+    font-weight: bolder;
+    margin:0;
+    padding-left: 5px;    
+}
+
+p{
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 4px;
+    text-align: justify;
+}
+
+article a{    
+    color: #fadc8a;
+    font-style: italic;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+article a:hover{  
+    color: rgba(250,184,5,1);
+}
+/*end*/
+
+/*about container*/
+#minAbout{
+    background: rgba(0,0,0,0.86);
+    float: right;
+    height: 149px;
+    margin: 140px 40px 0 0;
+    padding: 0;
+    position: relative;    
+}
+
+#minAbout img{
+    display: inline-block;
+    height: 149px;
+    left: -63px;
+    position: absolute;
+    vertical-align: middle;
+    width: 175px;
+}
+
+h2{
+    color: #f5e0a7;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 60px 20px 110px;
+    text-align: center;
+    vertical-align: middle;   
+}
+
+#minAbout a{
+    text-decoration: none;
+}
+/*end*/
+
+/*clearFix container*/
+.clearFix:before,
+.clearFix:after {
+  content:"";
+  display:table;
+}
+.clearFix:after {
+  clear:both;
+}
+/*end*/
+
+/*protfolio container*/
+#minPortfolio{
+    background: rgba(250,184,5,0.46);
+    border: none;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+}
+h1{ 
+    display: inline-block;
+    font-style: italic;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+
+#minPortfolio h1{ 
+    background: rgba(0,0,0,0.84);        
+    color: rgba(250,184,5,0.65);
+    left: 300px;
+    top: -27px;
+}
+
+.portfolio ul{
+    display: table;
+    list-style-type: none;
+    margin: 0 auto;    
+    padding: 0;
+}
+.portfolio li{
+    display: table-cell;
+}
+.portfolio a{
+    display: inline-block;
+}
+
+.portfolio img{
+    height: 160px;
+    margin: 0 10px;
+    width: 280px;
+}
+/*end*/
+
+/*footer section container*/
+footer{
+    background: rgba(0,0,0,0.3);
+    bottom: 0;
+    display: block;
+    height: 20px;
+    left: 0;
+    position:absolute;
+    width: 100%;
+}
+
+footer p{
+    color: rgba(250, 250, 250, 0.3);
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 10px;
+}
+/*end*/
+
+/*additional styles for ABOUT page*/
+/* display:table used to space li items horizontally*/
+.aboutPg{         
+    background: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(250,184,5,0.3),rgba(0,0,0,0.3));
+    background: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(250,184,5,0.3),rgba(0,0,0,0.3));
+    background: -o-linear-gradient(rgba(0,0,0,0.3), rgba(250,184,5,0.3),rgba(0,0,0,0.3));
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(250,184,5,0.3),rgba(0,0,0,0.3));
+    margin: 40px 0;
+}
+/*about container*/
+#about{
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+#about h2{
+    margin: 0;
+    font-stretch: normal;
+    padding-top: 5px;
+    text-align: left;
+}
+#about p{
+    color: #f5e0a7;
+    font-size: 25px;
+    margin-top: 10px;
+}
+#aboutLeft, #aboutRight{    
+    display: inline-block;
+    width: 49%;
+} 
+
+#aboutLeft::before,
+#aboutRight::before{
+    content: "";
+    height: 240px;
+    width: 130px;
+}
+
+#aboutLeft,
+#aboutRight::before{
+    float: left;
+}
+
+#aboutRight,#aboutLeft::before{
+    float: right;
+}
+#portrait{
+    display: inline-block;
+    left: 41.5%;
+    position: absolute;
+    top: 10px;
+    width: 17%;
+}
+/*end*/
+
+.logo2{
+    display: inline-block;
+    height: 100px;
+    margin: 320px 590px;
+    position: absolute;    
+    width: 220px;
+}
+
+/*big portfolio container*/
+#portfolioBig{
+    height: 330px;
+}
+
+#portfolioBig ul{
+    position: relative;
+}
+
+#portfolioBig a{
+    margin: 100px auto;
+}
+/*end*/
+
+/*additional styles for BLOG page*/
+/*blog post container*/
+#blogPost{
+    background: rgba(0,0,0,0.6);
+    float: left;
+    margin-top: 60px;
+    padding: 10px;
+    position:absolute;
+    width: 70%;
+}
+
+#blogPost h3{
+    font-size: 1.3em;
+}
+#blogPost small{
+    font-size: 0.9em;
+}
+#blogPost p{
+    font-size: 1.1em;
+}
+
+.textWrap{
+    float: left;
+    margin: 20px;
+    width: 20%;
+}
+/*end*/
+
+/*popular blog post container*/
+h4{
+    text-align:center;
+    padding-top: 10px;
+}
+
+#popularBlog{
+    background: rgba(250,184,5,0.64);
+    float: right;
+    margin-top: 60px;
+    width: 27%;
+}
+#popularBlog article{      
+    padding: 10px;
+}
+#popularBlog h1{   
+    color: rgba(0,0,0,0.64);
+    display: block;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+}
+
+#popularBlog h3{
+    color: rgba(0,0,0,1);
+}
+#popularBlog small{
+    color: rgba(0,0,0,0.7);
+}
+#popularBlog  p{
+    color: rgba(0,0,0,0.9);
+}
+
+#popularBlog  a{
+    color: rgba(0,0,0,0.6);
+}
+#popularBlog  a:hover{
+    color: rgba(0,0,0,1);
+}
+
+#popularBlog form{
+    border-top: 1px solid rgba(0,0,0,1);
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+#popularBlog form input{
+    display: block;
+    margin: 5px auto;
+    width: 80%;
+}
+
+#popularBlog form input[type="submit"]{
+    background: #555;
+    display: block;
+    position: relative;
+    right: -118px;
+    width: 20%;
+}
+
+#popularBlog form input[type="submit"]:hover{
+    background: #333;
+}
+/*end*/
+
+/*additional fonts for contact page*/
+/*accounts container*/
+#accounts{
+    float:left;
+    margin-top: 350px;
+    width: 500px;
+}
+#accounts h1{
+    bottom: 4px;
+    color: rgba(250,184,5,1);
+    font-size: 35px;
+    font-weight: bold;
+    text-align: right;
+    width: 100%;
+}
+
+#accounts em{
+    background: rgba(250,184,5,0.9);
+    color: rgba(0,0,0,0.9);
+    font-size: 37px;
+}
+#details{
+    background: rgba(0,0,0,0.64);
+    float:left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    width:90%;
+}
+
+#details li{
+    color: rgba(250,184,5,0.8);
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 53px;
+    margin-right: 4px;
+}
+#detailsIcons{
+    background: rgba(250,184,5,0.64);
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+}
+.icon{
+    padding: 3px;
+}
+
+.icon:hover{
+    background: rgba(250,184,5,0.9);    
+}
+/*end*/
+
+/*contact container*/
+#contact{
+    background: rgba(250,184,5,0.3);
+    float: right;
+    margin: 60px 0;
+    padding: 5px;
+    max-width: 50%;
+}
+
+#contact input{
+    display: block;
+    font-size: 20px;
+    height: 30px;
+    margin: 6px 0;
+    width: 70%;
+}
+
+#contact input[type="submit"]{
+    background: #555;
+    display: block;
+    font-style: normal;
+    float:right;
+    text-align: center;
+    width: 100px;
+}
+
+#contact textarea{
+    background: rgba(0,0,0,0.4);
+    border: none;
+    color: rgba(250,184,5,0.9);
+    display: block;
+    height: 200px;
+    width: 500px;
+    resize: vertical;
+    max-height:500px;
+    
+}
+#contact input[type="submit"]:hover{
+    background: #333;
+}
+
+
+input::-webkit-input-placeholder{
+    color: rgba(250,184,5,0.9);
+    text-align: right;
+}
+input::-moz-input-placeholder{
+    color: rgba(250,184,5,0.9);
+    text-align: right;
+}
+input::-ms-input-placeholder{
+    color: rgba(250,184,5,0.9);
+    text-align: right;
+}
+textarea::-webkit-input-placeholder{
+    color: rgba(250,184,5,0.9);
+    text-align: right;
+}
+textarea::-ms-input-placeholder{
+    color: rgba(250,184,5,0.9);
+    text-align: right;
+}
+textarea::-moz-input-placeholder{
+    color: rgba(250,184,5,0.9);
+    text-align: right;
+}
+#contact textarea:hover,
+#contact textarea:focus,
+#contact textarea:active{    
+    background: rgba(0,0,0,0.6); 
+}
+
+/*end*/
