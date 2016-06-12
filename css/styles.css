@@ -1,0 +1,499 @@
+/*add fixed body image*/
+body{ 
+    background: url('../img/background.jpg') center center no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+    background-position: center;
+    z-index: 1;
+    }
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  body {
+    left: 50%;
+    margin-left: -512px;   /* 50% */      
+    z-index: 1;
+  }
+}
+
+/*default input colors*/
+input,
+textarea,
+button{    
+    background: rgba(0, 0, 0, 0.7) !important;    
+    border-color: rgba(250, 184, 5, 0.46) !important;
+    color: lightgray!important;
+}
+input:hover,
+textarea:hover,
+button:hover{    
+    background: rgba(0, 0, 0, 0.7) !important;    
+    border-color: rgba(250, 184, 5, 0.64) !important;
+    border-width: 1.5px;
+    color: lightgray!important;
+}
+/*change search icon color*/
+.glyphicon{
+    color: rgba(250, 184, 5, 0.46);
+    font-size: 20px;
+    vertical-align: middle;
+}
+.glyphicon:hover{
+    color: rgba(250, 184, 5, 0.64);
+}
+.btn-default{
+    text-shadow: 0 1px 0 rgba(250, 184, 5, 0.64)!important;
+}
+
+/*START navigation bar styling*/
+/*vertically center toggle button*/
+.navbar-toggle{
+    margin: 15px!important;
+}
+/*modify navigation bar color add shadow*/
+.navbar{
+    background: rgba(0, 0, 0, 0.3)!important;
+    box-shadow: 5px 5px 10px -5px rgba(250, 184, 5, 0.64)!important;  
+}
+
+/*remove white border when collapsed*/
+.navbar-default .navbar-collapse, .navbar-default .navbar-form, .navbar-default {
+    border: none!important;
+}
+
+/*logo background*/
+.navbar-brand img{
+    background-color: rgba(250, 184, 5, 0.46);
+    box-shadow: inset 5px 5px 10px -5px rgba(250, 184, 5, 0.64),
+                inset -5px -5px 10px -5px rgba(250, 184, 5, 0.64)!important;
+}
+
+/*format search form*/
+.fix-top{
+    position: fixed;
+    right: 10px;    
+    top: 0px;
+}
+.fix-top .input-group-addon,
+.fix-top button{
+    height: 30px;
+}
+.navbar-form {
+    box-shadow: none!important;
+}
+
+/*vertical center for toggle button*/
+.navbar-header .navbar-toggle{
+    line-height: 50px!important;
+}    
+/*modify navigation bar buttons*/
+.navbar-collapse .navbar-nav li>a{
+border: none !important;
+box-shadow: none;
+color: rgba(250, 184, 5, 0.46)!important;
+font-family: Arial, sans-serif;
+font-weight: bold;
+text-shadow: none;
+text-transform: uppercase;
+}
+
+/*invert colors when hovered*/
+.navbar-collapse .navbar-nav li>a:hover{
+    background: rgba(250, 184, 5, 0.26)!important;
+    color: rgba(0, 0, 0, 0.6)!important;    
+}
+
+/*add shadow to the top and bottom when clicked*/
+.navbar-collapse .navbar-nav li>a:active{
+    box-shadow: 0 4px 4px -1px rgba(250, 184, 5, 0.64),
+                0 -4px 4px -1px rgba(250, 184, 5, 0.64);
+}
+
+/*invert colors and add shadows when active*/
+.navbar-default .navbar-nav>.active>a{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5)!important;
+    box-shadow: inset 4px 4px 5px -4px rgba(0, 0, 0, 0.5),
+                inset -4px -4px 5px -4px rgba(0, 0, 0, 0.5)!important; 
+    color: rgba(0, 0, 0, 0.9)!important;
+    background-image: linear-gradient(to bottom,rgba(250, 184, 5, 0.46) 0,rgba(250, 184, 5, 0.46) 100%)!important;    
+    background-color: rgba(250, 184, 5, 0.46)!important;
+}
+/*END navigation bar styling*/
+
+/*START content styling*/
+/*section should strech through all height*/
+section{
+    overflow: hidden;
+}
+
+/*container has 80% height of section*/
+.container{
+/*    background: rgba(0,0,0,0.03);*/
+    overflow-y: scroll;
+}
+
+#home{
+    height: 100%;
+}
+#projects{
+    background: rgba(255, 255, 255, 0.4);
+}
+#about, #contact{
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/*default header text styles*/
+.scrolled h1, .scrolled h2, .scrolled h3{
+    color: rgba(250, 184, 5, 0.84);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 15px;
+    text-shadow: 1px 1px rgba(0,0,0,0.7);
+}
+.scrolled h2{
+    text-align: center;
+}
+
+/*uppercase name*/
+.scrolled #big-name{
+    color: rgba(0,0,0,1)!important;
+    text-shadow: -1px -1px 5px rgba(250, 184, 5, 0.84),
+                  1px 1px 5px rgba(250, 184, 5, 0.84);
+    text-transform: uppercase;    
+}
+/*change carousel bullet position, color, add shadow*/
+.carousel{
+    margin: 20px!important;
+    padding: 10px 0;
+}
+.carousel-indicators li{
+    background: rgba(0,0,0,0.3);
+    border-color: rgba(0, 0, 0, 0.84)!important;
+    text-shadow: -1px -1px 5px rgba(250, 184, 5, 0.84),
+                  1px 1px 5px rgba(250, 184, 5, 0.84);
+}
+.carousel-indicators li:hover{
+    background: rgba(0, 0, 0, 0.84)!important;
+}
+.carousel-indicators li.active{
+    background: rgba(0, 0, 0, 0.64)!important;
+    color: rgba(250, 184, 5, 0.84)!important;
+}
+/*change carousel controls appearance*/
+.carousel-control:hover{
+    background: rgba(0, 0, 0, 0.84)!important;
+    color: rgba(250, 184, 5, 0.84)!important;
+}
+
+/*scroll container divider*/
+section hr{
+    border: 2px solid rgba(0, 0, 0, 1);
+    box-shadow: 1px 1px 1px rgba(250, 184, 5, 1),
+                -1px 0px 1px rgba(250, 184, 5, 1),
+                0px -2px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+/*about me text and image formatting*/
+#about article{
+/*    background: rgba(0, 0, 0, 0.4);*/
+}
+#about article>p{
+    color: rgba(250, 184, 5, 0.84);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+}
+#about article>img{
+    margin: 15px;
+}
+
+/*projects section formatting*/
+#projects{
+/*    background: rgba(255, 255, 255, 0.4);*/
+}
+#projects h3{
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 0;
+}
+#projects p, #projects li{
+    color: rgba(0, 0, 0, 1);
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 10px;
+}
+#projects ul{
+    list-style: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+#projects li:before{
+    content: "- ";    
+}
+/*contact section formatting*/
+#contact{
+/*    background: rgba(0, 0, 0, 0.4);*/
+}
+#contact h2 em{   
+    color: rgba(0, 0, 0, 1);
+    font-size: 40px;
+    text-shadow: 1px 1px 1px rgba(250, 184, 5, 0.84),
+                -1px -1px 1px rgba(250, 184, 5, 0.84);
+}
+#contact #details{
+    margin: 25px;
+}
+#contact ul{
+    display: table;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0!important;
+}
+#contact ul li{
+    text-align: right;
+}
+#contact ul li a{
+    color: rgba(250, 184, 5, 0.64);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold; 
+}
+#contact ul li a:hover{
+    color: rgba(250, 184, 5, 0.84);
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);    
+}
+#contact ul li a img{
+    background: rgba(250, 184, 5, 0.6);  
+    border: none;
+    padding: 5px;
+    margin:0 15px;
+}
+
+#contact ul li a img:hover{
+    background: rgba(250, 184, 5, 0.84); 
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+}
+
+
+#contact iframe {
+    border-color: rgba(250, 184, 5, 0.84);
+    height: 255px;
+    width: 100%;
+}
+/*END content formatting*/
+/*footer should be always visible*/
+footer{
+    bottom: 0;
+    display: block; 
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+}
+
+footer p{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+/*custom scrollbar*/
+#scrollbar::-webkit-scrollbar{
+    width: 5px;
+    background: rgba(0, 0, 0, 0.5);
+}
+#scrollbar::-webkit-scrollbar-thumb{
+    background-color: rgba(250, 184, 5, 1);
+    border-radius:10px;
+    height: 25%;
+}
+#scrollbar::-webkit-scrollbar{
+    width: 5px;
+}
+/*Custom scrollbar*/
+
+/*container only visible for tablets and PCs*/
+@media (min-width: 768px) {
+    /*skew navbar when not collapsed*/
+    .navbar{
+        width: 700px;
+        -webkit-transform: skew(-40deg);
+           -moz-transform: skew(-40deg);
+             -o-transform: skew(-40deg);
+    margin-top: 50px;
+    margin-left: 100px;
+    }
+    .navbar-nav,
+    .navbar-brand{
+        -webkit-transform: skew(40deg);
+           -moz-transform: skew(40deg);
+             -o-transform: skew(40deg);
+        }    
+    /*add and position logo*/
+    .navbar-brand img{
+        left: -45px;
+        position: absolute;
+        top: 0;
+    }    
+    /*position navigation pushbuttons*/
+    .navbar-nav{
+        margin-left: 0!important;
+    }
+    /*change search field width*/
+    .input-group-addon{
+        width: 300px !important;
+    }
+    
+    /*modify navigation bar buttons*/
+    .navbar-collapse .navbar-nav li>a{
+    font-size: 20px;
+    }    
+    /*    */
+    section{
+    margin-top: 102px!important;
+    height: 86vh;
+    }
+    
+    .container{
+        height: 86vh;
+    } 
+    /*welcome message formatting*/
+    .scrolled h1{
+        font-size: 50px;
+        text-align: center;
+    }
+}
+/*container only visible for smartphones*/
+@media (max-width: 768px) {
+    
+    .navbar-brand{
+        height: auto!important;
+        padding: 0 15px!important;
+    }       
+    /*change search field width*/
+    .input-group-addon{
+        width: 200px !important;
+    }    
+    /*modify navigation bar buttons*/
+    .navbar-collapse .navbar-nav li>a{
+    font-size: 15px;
+    line-height: 20px;
+    }
+    .container{
+        height: 91vh;
+    }
+    section{
+    margin-top: 52px!important;
+    height: 91vh;
+    }
+
+    /*welcome message formatting*/
+    .scrolled h1{
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+/*Styles for multi-item carousels*/
+.multi-item-carousel .carousel-control{
+    width: 4%;
+    background-image: none;
+}
+
+.multi-item-carousel .cloneditem-1,
+.multi-item-carousel .cloneditem-2,
+.multi-item-carousel .cloneditem-3{
+    display: none;
+}
+
+
+/* Portrait tablet to landscape and desktop */
+@media all and (min-width: 768px) {  
+    .multi-item-carousel .carousel-inner > .active.right,
+    .multi-item-carousel .carousel-inner > .next {
+                left: 50%;
+      }
+    .multi-item-carousel .carousel-inner > .active.left,
+    .multi-item-carousel .carousel-inner > .prev {
+                left: -50%;
+      }  
+    .multi-item-carousel .carousel-inner > .left,
+    .multi-item-carousel .carousel-inner > .prev.right,
+    .multi-item-carousel .carousel-inner > .active {
+                left: 0;
+      }
+    .multi-item-carousel .carousel-inner .cloneditem-1 {
+                display: block;
+      }
+    .multi-item-carousel .carousel-inner .cloneditem-2,
+    .multi-item-carousel .carousel-inner .cloneditem-3 {
+                display: none;
+      }      
+    .multi-item-carousel .carousel-inner > .item.active.right,
+    .multi-item-carousel .carousel-inner > .item.next {
+        -webkit-transform: translate3d(50%, 0, 0);
+                transform: translate3d(50%, 0, 0);
+                left: 0;
+      }
+    .multi-item-carousel .carousel-inner > .item.active.left,
+    .multi-item-carousel .carousel-inner > .item.prev {
+        -webkit-transform: translate3d(-50%, 0, 0);
+                transform: translate3d(-50%, 0, 0);
+                left: 0;
+      }  
+    .multi-item-carousel .carousel-inner > .item.left,
+    .multi-item-carousel .carousel-inner > .item.prev.right,
+    .multi-item-carousel .carousel-inner > .item.active {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                left: 0;
+      }
+}
+
+/* Desktop */
+@media all and (min-width: 992px) {  
+    .multi-item-carousel .carousel-inner > .active.right,
+    .multi-item-carousel .carousel-inner > .next {
+                left: 330%;
+      }
+    .multi-item-carousel .carousel-inner > .active.left,
+    .multi-item-carousel .carousel-inner > .prev {
+                left: -33%;
+      }  
+    .multi-item-carousel .carousel-inner > .left,
+    .multi-item-carousel .carousel-inner > .prev.right,
+    .multi-item-carousel .carousel-inner > .active {
+                left: 0;
+      }
+    .multi-item-carousel .carousel-inner .cloneditem-1,    
+    .multi-item-carousel .carousel-inner .cloneditem-2{
+                display: block;
+      }
+    .multi-item-carousel .carousel-inner .cloneditem-3 {
+                display: none;
+      }      
+    .multi-item-carousel .carousel-inner > .item.active.right,
+    .multi-item-carousel .carousel-inner > .item.next {
+        -webkit-transform: translate3d(33%, 0, 0);
+                transform: translate3d(33%, 0, 0);
+                left: 0;
+      }
+    .multi-item-carousel .carousel-inner > .item.active.left,
+    .multi-item-carousel .carousel-inner > .item.prev {
+        -webkit-transform: translate3d(-33%, 0, 0);
+                transform: translate3d(-33%, 0, 0);
+                left: 0;
+      }  
+    .multi-item-carousel .carousel-inner > .item.left,
+    .multi-item-carousel .carousel-inner > .item.prev.right,
+    .multi-item-carousel .carousel-inner > .item.active {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                left: 0;
+      }
+}
