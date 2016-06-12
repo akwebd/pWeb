@@ -1,81 +1,393 @@
-<html>
-    
+<!DOCTYPE html>
+<html lang="en">    
     <head>
-    <title>akWebDesign</title>
-        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>akWebDesign</title>
+        <!--font-->
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
         <!-- Normalize.css -->
-        <link rel="stylesheet" type="text/css" href="normalize.css">
-        
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">        
+
         <!-- Custom Styles -->
-        <link rel="stylesheet" type="text/css" href="styles.css">    
-        
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+        <!-- Bootstrap UI CSS -->        
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"> 
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css"css/bootstrap.min.css"">
+
+        <!-- jQuery UI CSS -->
+        <link href="js/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet">
+
         <!--
         Meta Description. For Search Engines.
         For more about <meta> tags: w3schools.com/tags/tag_meta.asp
         -->
-        
-        <meta name="description" content="ak webdesign blog and portfolio page.">
-        
+
+        <meta name="description" content="akwebd portfolio page.">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
-        </script>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-    </head>
-    
-    <body>
-        <div class="wrapper">
-            <div class="container">
-                <header>
-                    <div class="pgSearch">
-                        <input type="text" title="Search on this website" placeholder="search">
-                        <input type="submit" title="Search" class="searchIcon">
-                    </div>
-                    <nav>
-                        <ul>
-                            <li> <a href="index.html"  class="current">home</a></li>
-                            <li> <a href="about.html">about</a></li>
-                            <li> <a href="blog.html">blog</a></li>
-                            <li> <a href="contact.html">contact</a></li>
-                        </ul>
-                    </nav>
-                </header>
-                <div class="clearFix">
-                    <div id="minBlog">
-                        <h1>LATEST BLOG POSTS</h1>
-                            <article>
-                                <h3>Title</h3>
-                                <small><time datetime="8-5-15"> May 8, 2015:</time></small>
-                                <p>Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Sed porttitor lectus nibh. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum....<a href="#">read more</a></p>
-                            </article>
-
-                            <article>
-                                <h3>Title</h3>
-                                <small><time datetime="8-5-15"> May 8, 2015:</time></small>
-                                <p>Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Sed porttitor lectus nibh. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum....<a href="#">read more</a></p>
-                            </article>
-                    </div>  
-
-                    <div id="minAbout">
-                        <a href="about.html">
-                            <img src="img/logo1.png" alt="ak web design logo">
-                            <h2>ARTURAS KAIRYS <br><br>
-                            WEB DESIGNER AND<br>
-                                PROGRAMMER</h2>
-                        </a>
-                    </div>
-                </div><!--clearFix-->
-                <div id="minPortfolio" class="portfolio">
-                    <h1>PORTFOLIO</h1>
-                    <ul>                    
-                        <li><a href="#" ><img src="img/google_clone.jpg" alt="Google search clone web page" title="Google search clone"></a></li>
-                        <li><a href="#"><img src="img/background.jpg" alt="Personal portfolio web page" title="Personal portfolio web page"></a></li>   
-                        <li><a href="#"><img src="img/background.jpg" alt="Web page #3"  title="Personal portfolio web page"></a></li>
-                    </ul>
+    </head>    
+    <body>          
+        <form class="navbar-form pull-right hidden-xs fix-top" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control input-group-addon input-sm" placeholder="Search site..." name="srch-term" id="srch-term">
+                <div class="input-group-btn">
+                    <button class="btn" type="submit">
+                    <span class="glyphicon glyphicon-search"></span>
+                    </button>                                
                 </div>
-            </div><!--container-->
-            <footer>
-                <p>Copyright &copy; 2016. akWebDesign</p>
-            </footer>
-        </div><!--wrapper-->
+            </div>
+        </form>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar-scroll">
+            <div class="navbar-header row clear-fix">                
+                <a class="navbar-brand col-xs-6" rel="home" href="index.html">
+                    <img class="hidden-xs" src="img/logo.png" width=80px>
+                    <img class="visible-xs" src="img/logo.png" width=60px>
+                </a>
+                <div class="col-xs-3">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">                        
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--Search is hidden in a collapsed mode-->
+                <form class="navbar-form hidden" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control input-sm" placeholder="Search site..." name="srch-term" id="srch-term">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default input-sm" type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                            </button>                                
+                        </div>
+                    </div>
+                </form>
+            </div><!-- navbar header -->
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav" role="tablist">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <div class="container" id="scrollbar" data-spy="scroll" data-target="#navbar-scroll" data-offset="150">
+                <div class="scrolled" id="home">
+                    <h1>Nice to meet you, I am <br> <span id="big-name">arturas kairys</span><br>Web Designer and Developer</h1>
+                    <hr>                        
+                    <div class="row">
+                        <div class="carousel slide multi-item-carousel" data-ride="carousel" id="myCarousel">
+                            <!-- indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                                <li data-target="#myCarousel" data-slide-to="4"></li>
+                                <li data-target="#myCarousel" data-slide-to="5"></li>
+                                <li data-target="#myCarousel" data-slide-to="6"></li>
+                            </ol>   <!--carousel indicators   -->
+
+                            <!-- wrapper for the slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=1" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <div class="carousel-caption">
+                                            <p class="hidden-xs">First website</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-6 col-md-4"><a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=2" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <div class="carousel-caption">
+                                            <p class="hidden-xs">Second website</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=3" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <div class="carousel-caption">
+                                            <p class="hidden-xs">Third website</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=4" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <div class="carousel-caption">
+                                            <p class="hidden-xs">Fourth website</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=5" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <div class="carousel-caption">
+                                            <p class="hidden-xs">Fifth website</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=6" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <div class="carousel-caption">
+                                            <p class="hidden-xs">Sixth website</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=7" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <div class="carousel-caption">
+                                            <p class="hidden-xs">Seventh website</p>
+                                        </div>
+                                    </div>
+                                </div>                           
+                            </div><!-- carousel wrapper -->                        
+                            <!-- controls -->
+                           <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                               <span class="glyphicon glyphicon-chevron-left"></span>
+                               <span class="sr-only">Previous</span>
+                           </a>
+                           <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                               <span class="glyphicon glyphicon-chevron-right"></span>
+                               <span class="sr-only">Next</span>
+                           </a>                        
+                            <!-- controls -->
+                        </div><!-- carousel -->
+                    </div>   
+                </div>   
+                <div class="scrolled" id="about">
+                    <article class="clearfix">
+                        <h2>About me:</h2>                        
+                        <img src="http://placehold.it/300/bbbbbb/fff&amp;text=ME" class="img-responsive pull-right">                        
+                        <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </article>
+                </div>   
+                <div class="scrolled" id="projects">
+                    <div class="row">
+                        <h2>My Projects:</h2> 
+                        <div class="carousel slide multi-item-carousel" data-ride="carousel" id="myCarouselDetail">
+                            <!-- wrapper for the slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=1" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <article class="projectDetails text-xs-center">
+                                            <h3>Project:</h3>
+                                            <p>Short project description</p>
+
+                                            <h3>Challenges:</h3>
+                                            <p>Biggest challenge in this project</p>
+
+                                            <h3>Skills used <br> &#40;skill level [0-5]&#41;:</h3>
+                                            <ul>
+                                                <li>HTML5(1)</li>
+                                                <li>CSS3(1)</li>
+                                                <li>JavaScript(1)</li>
+                                                <li>mySQL(1)</li>
+                                                <li>PHP(1)</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-6 col-md-4"><a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=2" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <article class="projectDetails text-xs-center">
+                                            <h3>Project:</h3>
+                                            <p>Short project description</p>
+
+                                            <h3>Challenges:</h3>
+                                            <p>Biggest challenge in this project</p>
+
+                                            <h3>Skills used <br> &#40;skill level [0-5]&#41;:</h3>
+                                            <ul>
+                                                <li>HTML5(1)</li>
+                                                <li>CSS3(1)</li>
+                                                <li>JavaScript(1)</li>
+                                                <li>mySQL(1)</li>
+                                                <li>PHP(1)</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=3" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <article class="projectDetails text-xs-center">
+                                            <h3>Project:</h3>
+                                            <p>Short project description</p>
+
+                                            <h3>Challenges:</h3>
+                                            <p>Biggest challenge in this project</p>
+
+                                            <h3>Skills used <br> &#40;skill level [0-5]&#41;:</h3>
+                                            <ul>
+                                                <li>HTML5(1)</li>
+                                                <li>CSS3(1)</li>
+                                                <li>JavaScript(1)</li>
+                                                <li>mySQL(1)</li>
+                                                <li>PHP(1)</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=4" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <article class="projectDetails text-xs-center">
+                                            <h3>Project:</h3>
+                                            <p>Short project description</p>
+
+                                            <h3>Challenges:</h3>
+                                            <p>Biggest challenge in this project</p>
+
+                                            <h3>Skills used <br> &#40;skill level [0-5]&#41;:</h3>
+                                            <ul>
+                                                <li>HTML5(1)</li>
+                                                <li>CSS3(1)</li>
+                                                <li>JavaScript(1)</li>
+                                                <li>mySQL(1)</li>
+                                                <li>PHP(1)</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=5" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <article class="projectDetails text-xs-center">
+                                            <h3>Project:</h3>
+                                            <p>Short project description</p>
+
+                                            <h3>Challenges:</h3>
+                                            <p>Biggest challenge in this project</p>
+
+                                            <h3>Skills used <br> &#40;skill level [0-5]&#41;:</h3>
+                                            <ul>
+                                                <li>HTML5(1)</li>
+                                                <li>CSS3(1)</li>
+                                                <li>JavaScript(1)</li>
+                                                <li>mySQL(1)</li>
+                                                <li>PHP(1)</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=6" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <article class="projectDetails text-xs-center">
+                                            <h3>Project:</h3>
+                                            <p>Short project description</p>
+
+                                            <h3>Challenges:</h3>
+                                            <p>Biggest challenge in this project</p>
+
+                                            <h3>Skills used <br> &#40;skill level [0-5]&#41;:</h3>
+                                            <ul>
+                                                <li>HTML5(1)</li>
+                                                <li>CSS3(1)</li>
+                                                <li>JavaScript(1)</li>
+                                                <li>mySQL(1)</li>
+                                                <li>PHP(1)</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                </div> 
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=7" class="img-responsive center-block" alt="image placeholder"></a>
+                                        <article class="projectDetails text-xs-center">
+                                            <h3>Project:</h3>
+                                            <p>Short project description</p>
+
+                                            <h3>Challenges:</h3>
+                                            <p>Biggest challenge in this project</p>
+
+                                            <h3>Skills used <br> &#40;skill level [0-5]&#41;:</h3>
+                                            <ul>
+                                                <li>HTML5(1)</li>
+                                                <li>CSS3(1)</li>
+                                                <li>JavaScript(1)</li>
+                                                <li>mySQL(1)</li>
+                                                <li>PHP(1)</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                </div>                           
+                            </div><!-- carousel wrapper -->                        
+                            <!-- controls -->
+                           <a class="left carousel-control" href="#myCarouselDetail" role="button" data-slide="prev">
+                               <span class="glyphicon glyphicon-chevron-left"></span>
+                               <span class="sr-only">Previous</span>
+                           </a>
+                           <a class="right carousel-control" href="#myCarouselDetail" role="button" data-slide="next">
+                               <span class="glyphicon glyphicon-chevron-right"></span>
+                               <span class="sr-only">Next</span>
+                           </a>                        
+                            <!-- controls -->
+                        </div><!-- carousel -->
+                    </div>  
+                </div> 
+                <div class="scrolled" id="contact">
+                    <div class="row">
+                        <h2>Contact <em>ME</em></h2>
+                        <div class="row" id="details">
+                            <div class="col-lg-4 col-md-5 col-sm-6">
+                                <ul>
+                                    <li><a href="#">+000000000<img src="img/phone.png" alt="phone icon" class="icon" title="Contact me over the phone"></a></li>
+                                    <li><a href="#">LOCATION LOCATION<img src="img/location.png" alt="gps icon" class="icon" title="Get my location into you navigation system"></a></li>
+                                    <li><a href="#">name@web.com<img src="img/mail.png" alt="envelope icon" class="icon" title="Send me an email"></a></li>
+                                    <li><a href="#">name.surrname<img src="img/skype.png" alt="skype icon" class="icon" title="Contact via skype"></a></li>
+                                    <li><a href="#">name.surrname<img src="img/facebook.png" alt="facebook icon" class="icon" title="Contact via facebook"></a></li>
+                                </ul> 
+                            </div>
+                            <div class="col-lg-8 col-lg-7 col-sm-6">
+                                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBhTQpEhdwo8oN28beka3XrkdUcNnKMw_k&amp;q=place_id:ChIJR8bIl4Ui50YRl68-rD6Fgc4"></iframe>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form id="submit">
+                                <input class="form-control" type="text" placeholder="NAME">
+                                <input class="form-control" type="text" placeholder="SUBJECT">
+                                <textarea class="form-control" placeholder="WRITE YOU MESSAGE HERE PLEASE..." rows="6"></textarea>
+                                <button type="submit" class="btn btn-default">SUBMIT</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- container -->
+        </section>
+        <footer>
+            <p>Copyright 2016@<span>akWEBd</span></p>
+        </footer>
+        <!-- Load the jQuery CDN first -->
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        
+        <!-- If CDN fails to load, serve up the local version -->
+        <script>window.jQuery || document.write('<script src="js/jquery-2.1.4.js"><\/script>');</script>
+        
+        <!-- jQuery UI -->
+        <script src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+        
+        
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        
+        
+        <!-- Script for carousel with three visible items -->
+        <script src="js/script.js"></script>
     </body>
 </html>
